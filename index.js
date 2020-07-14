@@ -27,11 +27,11 @@ module.exports.connect = function(logger, endpoint, config) {
 /**
  * Connects to Digital Ocean server.
  */
-module.exports.connectToDO = function(logger, token, config) {
+module.exports.connectToDO = function(logger, credentials, config) {
     logger = getLogger(logger);
 
     const connector = require('./lib/connector-do');
-    return connector(logger, token, config);
+    return connector(logger, credentials, config);
 }
 
 /**
